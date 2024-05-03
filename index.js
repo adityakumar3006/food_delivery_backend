@@ -7,7 +7,7 @@ const mongoDB = require("./db");
 
 mongoDB();
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://dynamic-pixie-25914d.netlify.app/"); // Use FRONTEND_URL environment variable
+    res.setHeader("Access-Control-Allow-Origin", "https://dynamic-pixie-25914d.netlify.app"); // Use FRONTEND_URL environment variable
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
