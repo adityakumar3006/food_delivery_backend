@@ -17,7 +17,7 @@ mongoDB();
 // });
 
 app.use(cors({
-    origin: process.env.FRONTEND_URL // Replace this with your Netlify frontend URL
+    origin: "https://roaring-elf-fc0f60.netlify.app/"// Replace this with your Netlify frontend URL
 }));
 app.get("/", (req, res) => {
     res.send("hello aditya!!");
