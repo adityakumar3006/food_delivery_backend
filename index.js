@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const cors = require("cors");
 require("dotenv").config(); // Load environment variables from .env file
 const port = process.env.PORT || 5000; // Use PORT environment variable or default to 5000
 //FRONTEND_URL=https://dynamic-pixie-25914d.netlify.app/
