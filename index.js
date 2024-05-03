@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 require("dotenv").config(); // Load environment variables from .env file
 const port = process.env.PORT || 5000; // Use PORT environment variable or default to 5000
-
+//FRONTEND_URL=https://dynamic-pixie-25914d.netlify.app/
 const mongoDB = require("./db");
 
 mongoDB();
 app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", process.env.FRONTEND_URL); // Use FRONTEND_URL environment variable
+    res.setHeader("Access-Control-Allow-Origin", "https://dynamic-pixie-25914d.netlify.app/"); // Use FRONTEND_URL environment variable
     res.header(
         "Access-Control-Allow-Headers",
         "Origin, X-Requested-With, Content-Type, Accept"
