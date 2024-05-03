@@ -6,14 +6,18 @@ const port = process.env.PORT || 5000; // Use PORT environment variable or defau
 const mongoDB = require("./db");
 
 mongoDB();
-app.use((req, res, next) => {
-    res.setHeader("Access-Control-Allow-Origin", "https://dynamic-pixie-25914d.netlify.app"); // Use FRONTEND_URL environment variable
-    res.header(
-        "Access-Control-Allow-Headers",
-        "Origin, X-Requested-With, Content-Type, Accept"
-    );
-    next();
-});
+// app.use((req, res, next) => {
+//     res.setHeader("Access-Control-Allow-Origin", "https://dynamic-pixie-25914d.netlify.app"); // Use FRONTEND_URL environment variable
+//     res.header(
+//         "Access-Control-Allow-Headers",
+//         "Origin, X-Requested-With, Content-Type, Accept"
+//     );
+//     next();
+// });
+
+app.use(cors({
+    origin: "https://dynamic-pixie-25914d.netlify.app" // Replace this with your Netlify frontend URL
+}));
 app.get("/", (req, res) => {
     res.send("hello aditya!!");
 });
